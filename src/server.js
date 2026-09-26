@@ -3,7 +3,9 @@ const path = require('node:path');
 const { openDb } = require('./db');
 const { createApp } = require('./app');
 
-const dbFile = process.env.DB_FILE || path.join(__dirname, '..', 'data', 'schole.db');
+// On Railway, keep the database on the attached volume so it survives redeploys.
+const dataDir = process.env.RAILWAY_VOLUME_MOUNT_PATH || path.join(__dirname, '..', 'data');
+const dbFile = process.env.DB_FILE || path.join(dataDir, 'schole.db');
 const port = Number(process.env.PORT) || 3000;
 
 const app = createApp(openDb(dbFile));
