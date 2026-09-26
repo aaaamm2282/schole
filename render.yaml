@@ -1,0 +1,17 @@
+# Render Blueprint: one free web service.
+# Free instances have no persistent disk, so the SQLite file resets whenever
+# the service restarts or redeploys (see README).
+services:
+  - type: web
+    name: schole
+    runtime: node
+    plan: free
+    buildCommand: npm ci
+    startCommand: npm start
+    healthCheckPath: /
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      # Random admin password; read it under Environment in the Render dashboard.
+      - key: ADMIN_PASSWORD
+        generateValue: true
