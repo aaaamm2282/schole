@@ -1,0 +1,18 @@
+{
+  "name": "schole",
+  "version": "1.0.0",
+  "description": "سامانه مدیریت انبار مدرسه",
+  "main": "src/server.js",
+  "private": true,
+  "type": "commonjs",
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "start": "node --no-warnings=ExperimentalWarning src/server.js",
+    "test": "node --no-warnings=ExperimentalWarning --test"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
