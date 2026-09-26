@@ -34,5 +34,5 @@ npm test
 
 - `src/app.js` — API (Express)
 - `src/db.js` — جدول‌های SQLite
-- `public/` — رابط کاربری (HTML/CSS/JS بدون نیاز به build)
+- `public/` — رابط کاربری (HTML/CSS/JS بدون نیاز به build)؛ طراحی بر پایه‌ی سیستم طراحی ui-ux-pro-max (پالت سنگ‌لوحی و سبز، فونت وزیرمتن، آیکون‌های Lucide) با حالت تیره، انیمیشن‌های سبک و نمای کارتی برای موبایل
 - `test/` — تست‌های API
